@@ -2,7 +2,7 @@ import Chair from "../assets/couch.png";
 import App from "../assets/app.svg";
 function header() {
   return (
-    <div className="h-screen">
+    <div className="h-fit pb-40 md:pb-0 mb-40">
       <div className=" ">
         <div className=" relative -z-20 bg-gradient-to-b from-yellow-600 w-full pr-4  to-yellow-400 xl:h-[584px] lg:h-[616px] md:h-[505px] sm:h-[442px] h-348">
           <div className="container mx-auto  ">
