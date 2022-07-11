@@ -46,35 +46,39 @@ function Navbar() {
         >
           {Open ? <FaTimes size={30} /> : <FaBars size={30} />}
         </span>
-        {Open && (
-          <div className="fixed  inset-0 bg-yellow-600 z-40">
-            <ul className="flex space-y-8  justify-center container mx-auto  items-center font-semibold text-xl pt-24   flex-col">
-              <li className="w-full px-20 text-center">
-                <a href="/">HOME</a>
-              </li>
-              <li className="w-full text-center px-20">
-                <a href="/">CONTACT</a>
-              </li>
+        <div
+          className={
+            Open
+              ? "fixed  inset-0 transition-all duration-700 opacity-100  bg-yellow-600 z-40"
+              : "fixed inset-0 transition-all duration-700 opacity-0 -translate-y-[150vh] bg-yellow-600 "
+          }
+        >
+          <ul className="flex space-y-8  justify-center container mx-auto  items-center font-semibold text-xl pt-24   flex-col">
+            <li className="w-full px-20 text-center">
+              <a href="/">HOME</a>
+            </li>
+            <li className="w-full text-center px-20">
+              <a href="/">CONTACT</a>
+            </li>
 
-              <li className="w-full px-20">
-                <a
-                  className="bg-red-500 w-full trans-opa container text-center mx-auto  block rounded-md hover:opacity-75 text-white p-4"
-                  href="/"
-                >
-                  HOME
-                </a>
-              </li>
-              <li className="w-full px-20">
-                <a
-                  className="bg-black trans-opa container text-center mx-auto  block rounded-md hover:opacity-75 text-white py-3"
-                  href="/"
-                >
-                  SIGN UP
-                </a>
-              </li>
-            </ul>
-          </div>
-        )}
+            <li className="w-full px-20">
+              <a
+                className="bg-red-500 w-full trans-opa container text-center mx-auto  block rounded-md hover:opacity-75 text-white p-4"
+                href="/"
+              >
+                HOME
+              </a>
+            </li>
+            <li className="w-full px-20">
+              <a
+                className="bg-black trans-opa container text-center mx-auto  block rounded-md hover:opacity-75 text-white py-3"
+                href="/"
+              >
+                SIGN UP
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
